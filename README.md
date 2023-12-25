@@ -68,6 +68,53 @@ print(f"Preparation Steps: {recipe_info['preparation_steps']}")
 
 The code uses a `config.json` file to store configurations for different websites. You can add configurations for additional websites by updating this file.
 
+---
+
+## Website Configuration Template
+
+The following template outlines the structure for configuring website-specific settings for recipe parsing.
+
+```json
+{
+    "websitename": {
+        "recipe_info_config": {
+            "recipe_name": "html locator for recipe name",
+            "recipe_description": "html locator for recipe description",
+            "recipe_persons": "html locator for recipe persons",
+            "recipe_time": "html locator for recipe time"
+        },
+        "preparation_config": {
+            "recipe_preparation": "html locator for recipe preparation"
+        },
+        "ingredients_config": {
+            "recipe_ingredients": "html locator for recipe ingredients"
+        },
+        "image_config": {
+            "image_folder": "folder path to store images",
+            "image_container_selector": "html locator for image container",
+            "image_tag_selector": "html locator for image tag",
+            "image_name_attribute": "attribute to extract image name"
+        }
+    }
+}
+```
+
+### Explanation:
+
+- **websitename**: Replace this with the name of the website you are configuring.
+  
+- **recipe_info_config**: Contains locators for various recipe information such as name, description, persons, and time.
+  
+- **preparation_config**: Contains the locator for the recipe preparation steps.
+  
+- **ingredients_config**: Contains the locator for the recipe ingredients.
+  
+- **image_config**: Contains settings related to image storage and retrieval.
+
+---
+
+You can use this Markdown section as a reference or documentation for setting up configurations for different websites.
+
 ### Contributing
 
 If you have any suggestions, improvements, or issues, please feel free to open an issue or create a pull request.
