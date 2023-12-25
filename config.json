@@ -1,0 +1,42 @@
+{
+    "15gram": {
+        "recipe_info_config": {
+            "recipe_name": "div.recipe-info h1",
+            "recipe_description": "div.recipe-description.row p.no-margin[itemprop='description']",
+            "recipe_persons": "div.recipe-info span.yield.left",
+            "recipe_time": "div.recipe-info span.duration.right"
+        },
+        "preparation_config": {
+            "recipe_prepration": "div.prep-methode ol"
+        },
+        "ingredients_config": {
+            "recipe_ingredients": "div.detail-ingr-block ul.no-bullet"
+        },
+        "image_config": {
+            "image_folder": "img-recipe",
+            "image_container_selector": "div.recipe-image-container",
+            "image_tag_selector": "img.recipe-image[itemprop='image']",
+            "image_name_attribute": "alt"
+        }
+    },
+    "dagelijksekost": {
+        "recipe_info_config": {
+            "recipe_name": "h1.dish-metadata__title.headline-1",
+            "recipe_description": "div.dish-print__description p",
+            "recipe_persons": "div.dish-print__sidebar h2",
+            "recipe_time": "div.dish-metadata__info-line"
+        },
+        "preparation_config": {
+            "recipe_prepration": "script[type='application/ld+json']"
+        },
+        "ingredients_config": {
+            "recipe_ingredients": "div.dish-ingredients.border-block ul"
+        },
+        "image_config": {
+            "image_folder": "img-recipe",
+            "image_container_selector": "div.dish-playground__images",
+            "image_tag_selector": "img",
+            "image_name_attribute": "alt"
+        }
+    }
+}
