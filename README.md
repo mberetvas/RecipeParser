@@ -68,8 +68,6 @@ print(f"Preparation Steps: {recipe_info['preparation_steps']}")
 
 The code uses a `config.json` file to store configurations for different websites. You can add configurations for additional websites by updating this file.
 
----
-
 ## Website Configuration Template
 
 The following template outlines the structure for configuring website-specific settings for recipe parsing.
@@ -97,7 +95,6 @@ The following template outlines the structure for configuring website-specific s
         }
     }
 }
-```
 
 ### Explanation:
 
