@@ -107,6 +107,8 @@ The following template outlines the structure for configuring website-specific s
 - **ingredients_config**: Contains the locator for the recipe ingredients.
   
 - **image_config**: Contains settings related to image storage and retrieval.
+  
+- **html_locator**: is the argument to use with soup.select_one()
 
 ---
 
