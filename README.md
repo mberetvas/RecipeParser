@@ -108,7 +108,7 @@ The following template outlines the structure for configuring website-specific s
   
 - **image_config**: Contains settings related to image storage and retrieval.
   
-- **html_locator**: is the argument to use with soup.select_one()
+- **html_locator**: is the argument to use with soup.select_one().
 
 ---
 
