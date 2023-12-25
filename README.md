@@ -95,7 +95,7 @@ The following template outlines the structure for configuring website-specific s
         }
     }
 }
-
+```
 ### Explanation:
 
 - **websitename**: Replace this with the name of the website you are configuring.
