@@ -32,6 +32,7 @@ class RecipeParser:
         self.html_content = self.get_html_content()
         self.soup = BeautifulSoup(self.html_content, 'html.parser')
         self._configurations = {}
+        self.image_path = ""
     
     def __str__(self):
         return f"{self.recipe_name} from {self.recipe_source}"
@@ -224,6 +225,8 @@ class RecipeParser:
 
                 with open(image_path, 'wb') as image_file:
                     image_file.write(response.content)
+                
+                self.image_path = image_path
             else:
                 print("No image tag found in the image container.")
         else:
