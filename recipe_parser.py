@@ -32,6 +32,9 @@ class RecipeParser:
         self.html_content = self.get_html_content()
         self.soup = BeautifulSoup(self.html_content, 'html.parser')
         self._configurations = {}
+    
+    def __str__(self):
+        return f"{self.recipe_name} from {self.recipe_source}"
 
     @property
     def configurations(self):
@@ -491,9 +494,11 @@ if __name__ == "__main__":
         recipe_site = input("Enter the name of the recipe site: ")
         recipe = RecipeParser(
             url=user_url1, config_loader=config_loader, recipe_source=recipe_site)
+        
         recipe.parse_recipe_info()
         recipe.parse_ingredients()
         recipe.parse_preparation_steps()
+        recipe.get_recipe_info()
 
         recipe.data_to_database()
         recipe.save_recipe_image()
