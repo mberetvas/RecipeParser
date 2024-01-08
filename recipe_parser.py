@@ -392,9 +392,17 @@ class ConfigLoader:
     - config_file (str): The path to the configuration file. Default is 'config.json'.
     """
 
-    def __init__(self, config_file='config.json'):
-        self.config_file = config_file
+    def __init__(self):
+        self.config_file = self.find_config_file()
         self.config_data = self.load_config()
+
+    def find_config_file(self):
+        root_dir = os.path.dirname(os.path.abspath(__file__))
+        for dirpath, dirnames, filenames in os.walk(root_dir):
+            for filename in filenames:
+                if filename == 'config.json':
+                    return os.path.join(dirpath, filename)
+        return None  # File not found
 
     def load_config(self):
         """
