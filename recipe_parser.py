@@ -355,7 +355,8 @@ class RecipeParser:
             else:
                 self.preparation_steps = []
 
-    def parse_amount_unit_ingredient(self, ingredient):
+    @staticmethod
+    def parse_amount_unit_ingredient(ingredient):
         """
         Parse and extract the amount, unit and ingredient from a given ingredient.
         Parameters:
